@@ -60,9 +60,17 @@ for i in range(len(questions)):
     if i == st.session_state.current_question:
         question = questions[i]
         st.write(question["question"])
-        answer = st.selectbox("Choose an answer", question["answers"], key=f"question_{i}")
+        
+        # Create checkboxes for each answer
+        selected_answers = []
+        for j, answer in enumerate(question["answers"]):
+            selected = st.checkbox(answer, key=f"answer_{i}_{j}")
+            if selected:
+                selected_answers.append(answer)
+        
+        # Submit button to move to the next question
         if st.button("Submit", key=f"submit_{i}"):
-            st.session_state.answers.append(answer)
+            st.session_state.answers.extend(selected_answers)
             st.session_state.current_question += 1
             st.experimental_rerun()
 
