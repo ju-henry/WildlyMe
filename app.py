@@ -1,4 +1,10 @@
+import os
+from dotenv import load_dotenv
 import streamlit as st
+import cohere
+
+# load env variables
+load_dotenv()
 
 # Define the questions and answers
 questions = [
@@ -72,8 +78,23 @@ for i in range(len(questions)):
         if st.button("Submit", key=f"submit_{i}"):
             st.session_state.answers.extend(selected_answers)
             st.session_state.current_question += 1
-            st.experimental_rerun()
+            st.rerun()
 
 # Display the final message after all questions have been answered
 if st.session_state.current_question == len(questions):
-    st.write("You are a horse")
+
+    st.write("You are a horse\n\n")
+
+    instructions = "Please give me the reasons that might make me comparable to a horse given the information provided in Input Text."
+    prompt = "\n" + "## Instructions\n" + instructions + " \n\n" + "## Input Text\n" + "\n".join(st.session_state.answers) + "\n"
+
+    co = cohere.Client(api_key=os.getenv('API_KEY_COHERE'))
+
+    response = co.generate(
+        model="command-r-plus",
+        prompt=prompt,
+        max_tokens=400,
+        seed=1  # Optional: Set seed for reproducibility
+    )
+    
+    st.write(response.generations[0].text.strip())
