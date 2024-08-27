@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import streamlit as st
 import cohere
 import json
+import numpy as np
 
 # load env variables
 load_dotenv()
@@ -93,6 +94,8 @@ if "current_question" not in st.session_state:
     st.session_state.current_question = -1
 if "answers" not in st.session_state:
     st.session_state.answers = []
+if "questions_asked" not in st.session_state:
+    st.session_state.questions_asked = []
 
 if st.session_state.current_question == -1:
 
@@ -121,17 +124,49 @@ for i in range(len(questions)):
         st.subheader(question["question"])
         answer = st.radio("Choose one:", question["answers"], index=None, key=f"question_{i}")
         if answer:
-            st.session_state.answers.append(answer)
+            st.session_state.questions_asked.append(i)
+            st.session_state.answers.append(question["answers"].index(answer))
             st.session_state.current_question += 1
             st.rerun()
 
 # Display the final message after all questions have been answered
 if st.session_state.current_question == len(questions):
 
-    st.write("You are a horse\n\n")
 
-    instructions = "Please give me the reasons that might make me comparable to a horse given the information provided in Input Text."
-    prompt = "\n" + "## Instructions\n" + instructions + " \n\n" + "## Input Text\n" + "\n".join(st.session_state.answers) + "\n"
+    # predict the animal
+
+    # get answers embeddings
+    embedding_answers = np.zeros((1, 384))
+    for i, j in zip(st.session_state.questions_asked, st.session_state.answers):
+        embedding_answers += np.load("embeddings/question" + str(i) + ".npy")[j,:]
+    
+    # get animal embeddings and names
+    embeddings_animal = np.load("embeddings/animals.npy")
+    with open('animals.json', 'r') as f:
+        animals = json.load(f)
+
+    # get the predicted animal
+    cosine_distances = np.dot(embeddings_animal, np.transpose(embedding_answers))
+    pred_animal = animals[np.argmax(cosine_distances)]
+
+
+    # display prediction
+
+    if pred_animal[0] in ["a", "e", "i", "o", "u"]:
+        article_animal = "an " + pred_animal
+    else:
+        article_animal = "a " + pred_animal
+
+    st.write("You are " + article_animal + "!\n\n")
+
+    instructions = f"""Please give me the reasons that might make me comparable to {article_animal} 
+    given the information provided in Input Text."""
+
+    text_answers = []
+    for i, j in zip(st.session_state.questions_asked, st.session_state.answers):
+        text_answers.append(questions[i]["answers"][j])
+
+    prompt = "\n" + "## Instructions\n" + instructions + " \n\n" + "## Input Text\n" + "\n".join(text_answers) + "\n"
 
     co = cohere.Client(api_key=os.getenv('API_KEY_COHERE'))
 
