@@ -88,6 +88,7 @@ st.markdown("""
 # Define the questions and answers
 with open('questions.json', 'r') as f:
     questions = json.load(f)
+questions = [{**q, "answer_encode": [q["answer_head"] + ": " + ans for ans in q["answers"]]} for q in questions]
 
 # Initialize session state to keep track of the current question and answers
 if "current_question" not in st.session_state:
@@ -117,21 +118,22 @@ if st.session_state.current_question == -1:
         st.rerun()
 
 # Loop through each question
-for i in range(len(questions)):
+for i in range(5):
     if i == st.session_state.current_question:
 
         question = questions[i]
         st.subheader(question["question"])
-        answer = st.radio("Choose one:", question["answers"], index=None, key=f"question_{i}")
+        st.write(question["info"])
+        answer = st.radio("Choose one:", [x + ": " + y for x, y in zip(question["answer_short"], question["answers"])], 
+                          index=None, key=f"question_{i}")
         if answer:
             st.session_state.questions_asked.append(i)
-            st.session_state.answers.append(question["answers"].index(answer))
+            st.session_state.answers.append([x + ": " + y for x, y in zip(question["answer_short"], question["answers"])].index(answer))
             st.session_state.current_question += 1
             st.rerun()
 
 # Display the final message after all questions have been answered
-if st.session_state.current_question == len(questions):
-
+if st.session_state.current_question == 5:
 
     # predict the animal
 
@@ -164,7 +166,7 @@ if st.session_state.current_question == len(questions):
 
     text_answers = []
     for i, j in zip(st.session_state.questions_asked, st.session_state.answers):
-        text_answers.append(questions[i]["answers"][j])
+        text_answers.append(questions[i]["answer_encode"][j])
 
     prompt = "\n" + "## Instructions\n" + instructions + " \n\n" + "## Input Text\n" + "\n".join(text_answers) + "\n"
 

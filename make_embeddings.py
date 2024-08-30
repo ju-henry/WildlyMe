@@ -23,11 +23,12 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 # load questions
 with open('questions.json', 'r') as f:
     questions = json.load(f)
+questions = [{**q, "answer_encode": [q["answer_head"] + ": " + ans for ans in q["answers"]]} for q in questions]
 
 # encode and save answers
 i = 0
 for element in questions:
-    res = model.encode(element["answers"])
+    res = model.encode(element["answer_encode"])
     np.save(dir_path + "/question" + str(i) + ".npy", res)
     i += 1
 
