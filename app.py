@@ -149,7 +149,7 @@ if st.session_state.current_question == 5:
 
     # get the predicted animal
     cosine_distances = np.dot(embeddings_animal, np.transpose(embedding_answers))
-    pred_animal = animals[np.argmax(cosine_distances)]
+    pred_animal = list(animals.keys())[np.argmax(cosine_distances)]
 
 
     # display prediction
@@ -160,6 +160,9 @@ if st.session_state.current_question == 5:
         article_animal = "a " + pred_animal
 
     st.write("You are " + article_animal + "!\n\n")
+
+    st.subheader("Career\n\n")
+    st.write(animals[pred_animal]["career"] + "\n\n")
 
     instructions = f"""Please give me the reasons that might make me comparable to {article_animal} 
     given the information provided in Input Text."""

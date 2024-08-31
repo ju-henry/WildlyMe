@@ -1,3 +1,4 @@
 .env
 app2.py
 radio_button.html
+*.ipynb

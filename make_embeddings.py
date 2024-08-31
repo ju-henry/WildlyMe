@@ -37,5 +37,5 @@ with open('animals.json', 'r') as f:
     animals = json.load(f)
 
 # encode and save animals
-res = model.encode(animals)
+res = model.encode(list(animals.keys()))
 np.save(dir_path + "/animals.npy", res)
