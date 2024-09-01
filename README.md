@@ -1,9 +1,3 @@
-<style>
-.justified {
-  text-align: justify;
-}
-</style>
-
 # WildlyMe
 
 ## WildlyMe is an AI-based personality test. 
@@ -42,8 +36,6 @@ These questions are the main variables: we can make, assess, sort and discard th
 - If we produce new questions, we should be able to include them or not based on some criteria, then find the best subet of questions so that the test is not biased, all this in an iterative fashion to see the quality criteria improve.
 
 WORK IN PROGRESS.
-
-</div>
 
 ## Sources
 
