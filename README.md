@@ -3,7 +3,7 @@
 ## WildlyMe is an AI-based personality test. 
 ### Answer 10 questions and you'll know which animal you are!
 
-Here it is: [https://wildlyme.streamlit.app/](https://wildlyme.streamlit.app/)
+Here it is: [https://wildlyme.koyeb.app/](https://wildlyme.koyeb.app/)
 
 (WildlyMe is still under development.)
 
