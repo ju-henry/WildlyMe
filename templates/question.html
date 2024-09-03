@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>{{ question["question"] }}</h2>
+    <h3>{{ question["info"] }}</h3>
+    <form method="POST" id="questionForm">
+        {% for option in question.answer_display %}
+        <input type="radio" name="answer" value="{{ loop.index - 1 }}"> {{ option }}<br>
+        {% endfor %}
+        <input type="submit" value="Next" id="nextButton" disabled>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('questionForm');
+            const nextButton = document.getElementById('nextButton');
+
+            form.addEventListener('change', function() {
+                nextButton.disabled = !form.answer.value;
+            });
+        });
+    </script>
+
+</body>
+</html>
