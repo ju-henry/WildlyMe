@@ -3,16 +3,23 @@
 <head>
     <title>Question</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <h2>{{ question["question"] }}</h2>
     <h3>{{ question["info"] }}</h3>
     <form method="POST" id="questionForm">
         {% for option in question.answer_display %}
-        <input type="radio" name="answer" value="{{ loop.index - 1 }}"> {{ option }}<br>
+        <div class="answer-option">
+            <input type="radio" name="answer" value="{{ loop.index - 1 }}" id="answer{{ loop.index }}">
+            <span class="custom-radio"></span>
+            <label for="answer{{ loop.index }}">{{ option }}</label>
+        </div>
         {% endfor %}
         <input type="submit" value="Next" id="nextButton" disabled>
     </form>
+    
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
