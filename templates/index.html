@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Personality Test</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Wildlyme</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Let an AI robot determine your animal personality!</h1>
-    <h2>Answer 5 questions and you'll know!</h2>
-    <a href="{{ url_for('question') }}">Start the test</a>
+    <header>
+        <h1>Wildly.Me</h1>
+        <h2>Discover Your Wild Personality in Just 5 Questions!</h2>
+    </header>
+    <main>
+        <section id="cta">
+            <a href="{{ url_for('question') }}" class="no-underline">
+                <button id="start-quiz">Start Test</button>
+            </a>
+        </section>
+        <section id="animal-previews">
+            <h2 class="align-left">You could be...</h2>
+            <div class="animal-icons">
+                <img src="lion.png" alt="Lion">
+                <img src="owl.png" alt="Owl">
+                <img src="dolphin.png" alt="Dolphin">
+                <img src="wolf.png" alt="Wolf">
+            </div>
+        </section>
+        <section id="how-it-works">
+            <h2 class="align-left">How It Works</h2>
+            <ol>
+                <li>Answer 5 questions</li>
+                <li>An AI agent analyzes your responses</li>
+                <li>Discover your animal match!</li>
+            </ol>
+            <p>See <b><a href="https://github.com/ju-henry/WildlyMe">here</a></b> for the details!</p>
+        </section>
+    </main>
 </body>
 </html>
