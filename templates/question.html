@@ -6,18 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h2>{{ question["question"] }}</h2>
-    <h3>{{ question["info"] }}</h3>
-    <form method="POST" id="questionForm">
-        {% for option in question.answer_display %}
-        <div class="answer-option">
-            <input type="radio" name="answer" value="{{ loop.index - 1 }}" id="answer{{ loop.index }}">
-            <span class="custom-radio"></span>
-            <label for="answer{{ loop.index }}">{{ option }}</label>
-        </div>
-        {% endfor %}
-        <input type="submit" value="Next" id="nextButton" disabled>
-    </form>
+    <section id="question">
+        <h2>{{ question["question"] }}</h2>
+    </section>
+    <section id="info">
+        <h3 class="justify">{{ question["info"] }}</h3>
+    </section>
+    <section id="answers">
+        <form method="POST" id="questionForm">
+            {% for option in question.answers %}
+            <div class="answer-option">
+                <input type="radio" name="answer" value="{{ loop.index - 1 }}" id="answer{{ loop.index }}">
+                <label for="answer{{ loop.index }}">
+                    <div class="container">
+                        <div class="column left-column">
+                            <p>{{ question.answer_short[loop.index - 1] }}</p>
+                        </div>
+                        <div class="column right-column">
+                            <p>{{ option }}</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            {% endfor %}
+            <input type="submit" value="Next" id="nextButton" disabled>
+        </form>
+    </section>
     
     
 

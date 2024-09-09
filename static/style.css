@@ -36,6 +36,9 @@ h3 {
     text-align: left;
 }
 
+.justify {
+    text-align: justify;
+}
 
 button#start-quiz {
     display: block;
@@ -81,6 +84,26 @@ section {
 
 form {
     margin-top: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.column {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-column {
+    width: 300px; /* Fixed width for the left column */
+    background-color: #f0f8ff; /* Light blue background */
+    flex-shrink: 0;
+}
+
+.right-column {
+    flex-grow: 1; /* Fills the remaining space */
+    background-color: #ffe4e1; /* Light pink background */
 }
 
 .answer-option {

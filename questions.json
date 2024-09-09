@@ -1,19 +1,19 @@
 [
     {
-        "question": "How do you handle social situations?",
+        "question": "What does your social life look like?",
         "info": "In the animal kingdom, social behavior varies widely. Some species, like wolves, thrive in packs, while others, like tigers, prefer solitude. Each approach has its advantages, whether it's the strength of community or the independence of being alone. ",
         "answer_head": "The way I handle social situations",
         "answer_short": [
             "The Lone Wolf",
-            "The Social Butterfly",
-            "The Pack Animal",
-            "The Nomad"
+            "The Cozy Circle",
+            "The Group Enthusiast",
+            "The Network Navigator"
         ],
         "answers": [
-            "I prefer spending time alone and only occasionally join social gatherings.",
-            "I thrive in social environments, love being around people, and often find myself at the center of gatherings.",
-            "I enjoy being part of a close-knit group and feel most comfortable when I am with my friends and family.",
-            "I am always on the move, exploring new places and meeting new people, but I don't stay in one place for too long."
+            "I cherish solitude and rarely interact with others, preferring my own company and pursuits.",
+            "I have a small, tight-knit circle of close family and a few longtime friends I see regularly.",
+            "I thrive in large groups, always surrounded by many friends and acquaintances at social gatherings.",
+            "I constantly seek new connections, eagerly meeting strangers and expanding my social circle."
         ]
     },
     {
