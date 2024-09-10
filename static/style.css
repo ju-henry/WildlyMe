@@ -82,6 +82,16 @@ section {
     padding-left: 20px;
 }
 
+#question {
+    margin-top: 0px;
+    padding: 10px 20px;
+}
+
+#info {
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+
 form {
     margin-top: 20px;
 }
@@ -97,7 +107,6 @@ form {
 
 .left-column {
     width: 200px; /* Fixed width for the left column */
-    background-color: #f0f8ff; /* Light blue background */
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -114,7 +123,7 @@ form {
 
 .right-column {
     flex-grow: 1; /* Fills the remaining space */
-    background-color: #ffe4e1; /* Light pink background */
+    background-color: #ffe4e140; /* Light pink background */
 }
 
 .answer-option {
