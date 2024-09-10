@@ -91,14 +91,25 @@ form {
 }
 
 .column {
-    padding: 20px;
+    padding: 5px 20px;
     box-sizing: border-box;
 }
 
 .left-column {
-    width: 300px; /* Fixed width for the left column */
+    width: 200px; /* Fixed width for the left column */
     background-color: #f0f8ff; /* Light blue background */
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.catchword {
+    text-align: center;
+    background-color: #4CAF5030; /* Add background color */
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .right-column {
@@ -109,7 +120,7 @@ form {
 .answer-option {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     min-height: 54px; /* Minimum height equal to radio button */
 }
 
