@@ -2,29 +2,37 @@
 <html>
 <head>
     <title>Question</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <section id="question">
-        <h2>{{ question["question"] }}</h2>
+        <div class="container">
+            <div id="myleft-column">
+                <p id="question_number">({{ question_number + 1 }} / 5)</p>
+            </div>
+            <div class="column right-column">
+                <h2>{{ question["question"] }}</h2>
+            </div>
+        </div>
     </section>
     <section id="info">
-        <h3 class="justify">{{ question["info"] }}</h3>
+        <p id="infotext">{{ question["info"] }}</p>
     </section>
     <section id="answers">
         <form method="POST" id="questionForm">
             {% for option in question.answers %}
             <div class="answer-option">
                 <input type="radio" name="answer" value="{{ loop.index - 1 }}" id="answer{{ loop.index }}">
-                <label for="answer{{ loop.index }}">
+                <label>
                     <div class="container">
                         <div class="column left-column">
                             <p class="catchword">{{ question.answer_short[loop.index - 1] }}</p>
                         </div>
                         <div class="column right-column">
                             <div class="vertical-bar"></div>
-                            <p>{{ option }}</p>
+                            <p style="text-align: justify;">{{ option }}</p>
                         </div>
                     </div>
                 </label>

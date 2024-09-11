@@ -35,7 +35,9 @@ def question():
     if session['question_num'] >= 5:
         return redirect(url_for('result'))
 
-    return render_template('question.html', question=questions[session['question_num']])
+    return render_template('question.html', 
+                           question=questions[session['question_num']], 
+                           question_number=session['question_num'])
 
 @app.route('/result')
 def result():

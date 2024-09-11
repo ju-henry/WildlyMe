@@ -36,8 +36,12 @@ h3 {
     text-align: left;
 }
 
-.justify {
+#infotext {
+    line-height: 1.4;
     text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 19px;
 }
 
 button#start-quiz {
@@ -66,7 +70,7 @@ section {
 }
 
 #answers {
-    padding-right: 0;
+    padding-right: 10px;
 }
 
 .animal-icons {
@@ -88,11 +92,28 @@ section {
 
 #question {
     margin-top: 0px;
-    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#question_number {
+    color: #4CAF50; 
+    font-size: 35px;
+}
+
+#myleft-column {
+    width: 130px; /* Fixed width for the left column */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #info {
-    margin: 20px 0;
+    margin: 20px 0px;
     padding: 10px 20px;
 }
 
@@ -127,7 +148,6 @@ form {
 
 .right-column {
     flex-grow: 1; /* Fills the remaining space */
-    /*background-color: #ffe4e140; /* Light pink background */
     position: relative;
     display: flex;
     align-items: center; /* Centers vertically */
@@ -147,12 +167,12 @@ form {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    min-height: 54px; /* Minimum height equal to radio button */
+    min-height: 34px; /* Minimum height equal to radio button */
 }
 
 input[type="radio"] {
-    width: 54px;
-    height: 54px;
+    width: 34px;
+    height: 34px;
     margin-right: 15px;
     cursor: pointer;
     flex-shrink: 0;
@@ -165,7 +185,8 @@ label {
     flex: 1;
     display: flex;
     align-items: center;
-    min-height: 54px; /* Minimum height equal to radio button */
+    min-height: 34px; /* Minimum height equal to radio button */
+    pointer-events: none;
 }
 
 input[type="submit"] {
