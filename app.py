@@ -14,8 +14,6 @@ app.secret_key = os.getenv('FLASK_SECRET_KEY')
 # Define questions and animals
 with open('questions.json', 'r') as f:
     questions = json.load(f)
-questions = [{**q, "answer_encode": [q["answer_head"] + ": " + ans for ans in q["answers"]]} for q in questions]
-questions = [{**q, "answer_display": [shortans + ": " + ans for shortans, ans in zip(q["answer_short"], q["answers"])]} for q in questions]
 
 @app.route('/')
 def index():
@@ -43,19 +41,17 @@ def question():
 def result():
     # predict the animal
 
-    # get answers embeddings
-    embedding_answers = np.zeros((1, 384))
+    # get scores
+    score_answers = np.zeros((10, 1))
     for i, j in zip(session['questions_asked'], session['answers']):
-        embedding_answers += np.load("embeddings/question" + str(i) + ".npy")[j,:]
+        score_answers += np.load("scores/question" + str(i) + ".npy")[:, j:(j+1)]
     
-    # get animal embeddings and names
-    embeddings_animal = np.load("embeddings/animals.npy")
+    # get animal names
     with open('animals.json', 'r') as f:
         animals = json.load(f)
 
     # get the predicted animal
-    cosine_distances = np.dot(embeddings_animal, np.transpose(embedding_answers))
-    pred_animal = list(animals.keys())[np.argmax(cosine_distances)]
+    pred_animal = list(animals.keys())[np.argmax(score_answers)]
 
     return render_template('result.html', animal=pred_animal, info=animals[pred_animal])
 

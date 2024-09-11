@@ -2,7 +2,6 @@
     {
         "question": "What does your social life look like?",
         "info": "In the animal kingdom, social behavior varies widely. Some species, like wolves, thrive in packs, while others, like tigers, prefer solitude. Each approach has its advantages, whether it's the strength of community or the independence of being alone. ",
-        "answer_head": "The way I handle social situations",
         "answer_short": [
             "The Lone Wolf",
             "The Cozy Circle",
@@ -19,7 +18,6 @@
     {
         "question": "How do you react to new people?",
         "info": "In the animal kingdom, interactions with newcomers can vary greatly. Some species are curious and welcoming, while others are cautious or even territorial. These behaviors reflect the diverse social strategies animals use to navigate their environments.",
-        "answer_head": "The way I react to new people",
         "answer_short": [
             "The Curious Explorer",
             "The Cautious Observer",
@@ -36,7 +34,6 @@
     {
         "question": "What’s your ideal adventure?",
         "info": "In the wild, animals embark on various adventures, from long migrations to daring hunts. Each type of adventure reflects the unique behaviors and instincts of different species, showcasing their adaptability and resilience in the face of challenges.",
-        "answer_head": "My ideal adventure",
         "answer_short": [
             "The Epic Journey",
             "The Thrilling Hunt",
@@ -53,7 +50,6 @@
     {
         "question": "How do you express your creativity?",
         "info": "Creativity in the animal kingdom can take many forms, from intricate nest-building to vibrant displays of color and sound. Each species has its own unique way of expressing creativity, reflecting its environment and social structures.",
-        "answer_head": "The way I express my creativity",
         "answer_short": [
             "The Master Builder",
             "The Vibrant Performer",
@@ -70,7 +66,6 @@
     {
         "question": "How do you approach learning new skills?",
         "info": "In the animal kingdom, different species have unique ways of learning and adapting to their environments. Some animals learn through observation, while others rely on trial and error or instinct. Each approach highlights the diverse strategies animals use to thrive.",
-        "answer_head": "The way I learn new skills",
         "answer_short": [
             "The Hands-On Learner",
             "The Observant Scholar",
@@ -87,7 +82,6 @@
     {
         "question": "How do you deal with boredom?",
         "info": "Animals have unique ways of coping with boredom, whether through play, exploration, or social interactions. Understanding these behaviors can reveal insights into our own methods of finding engagement and excitement.",
-        "answer_head": "The way I deal with boredom",
         "answer_short": [
             "The Adventurous Explorer",
             "The Creative Thinker",
@@ -102,26 +96,24 @@
         ]
     },
     {
-        "question": "How do you react to authority?",
-        "info": "In the animal kingdom, responses to authority can vary widely, from submission to assertive challenge.",
-        "answer_head": "The way I deal with authority",
+        "question": "How do you deal with hierarchy?",
+        "info": "Different species approach hierarchy in unique ways; wolves establish clear dominance, while mice often exhibit submissive and avoidant behaviors.",
         "answer_short": [
-            "The Respectful Follower",
-            "The Questioning Challenger",
             "The Independent Spirit",
-            "The Diplomatic Negotiator"
+            "The Loyal Supporter",
+            "The Active Contributor",
+            "The Confident Leader"
         ],
         "answers": [
-            "I value authority and prefer to follow established rules and guidelines.",
-            "I often question authority and seek to understand the reasoning behind rules.",
-            "I prefer to operate on my own terms, often resisting authority when it feels restrictive.",
-            "I find a balance, respecting authority while also advocating for my own ideas and perspectives."
+            "I prefer to stay away from hierarchical structures, valuing independence and self-direction over formal roles.",
+            "I respect authority and follow established guidelines, believing that clear direction enhances teamwork and stability.",
+            "I actively participate within the hierarchy, sharing my ideas and collaborating with others to improve processes and outcomes.",
+            "I take charge and guide others, confidently making decisions and driving initiatives to achieve our collective goals."
         ]
     },
     {
         "question": "How do you celebrate achievements?",
         "info": "Animals have various ways of marking achievements, from displays of dominance to communal celebrations. These behaviors highlight the importance of recognition and bonding in the animal kingdom.",
-        "answer_head": "The way I celebrate an achievement",
         "answer_short": [
             "The Grand Celebrator",
             "The Quiet Reflector",
@@ -138,7 +130,6 @@
     {
         "question": "How do you handle routine?",
         "info": "In the animal kingdom, routines can play a crucial role in survival, from migration patterns to feeding schedules. Different species have adapted to routines in ways that suit their lifestyles and environments.",
-        "answer_head": "The way I handle routine",
         "answer_short": [
             "The Structured Planner",
             "The Flexible Improviser",
@@ -155,7 +146,6 @@
     {
         "question": "How do you typically react to stress?",
         "info": "Some animals have evolved to respond to stress with immediate action, while others employ more passive strategies. These responses can include fight or flight reactions, playing dead, or even using social bonds to alleviate stress.",
-        "answer_head": "The way I react to stress",
         "answer_short": [
             "The Action Taker",
             "The Calm Retreater",
