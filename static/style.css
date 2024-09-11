@@ -65,6 +65,10 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+#answers {
+    padding-right: 0;
+}
+
 .animal-icons {
     display: flex;
     justify-content: space-around;
@@ -123,8 +127,21 @@ form {
 
 .right-column {
     flex-grow: 1; /* Fills the remaining space */
-    background-color: #ffe4e140; /* Light pink background */
+    /*background-color: #ffe4e140; /* Light pink background */
+    position: relative;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    padding-right: 0;
 }
+
+.vertical-bar {
+    position: absolute; /* Position it absolutely within the container */
+    left: 0; /* Align to the left */
+    top: 10px; /* Start from the top */
+    bottom: 10px; /* Extend to the bottom */
+    width: 4px; /* Width of the vertical bar */
+    background-color: #4CAF50; /* Change this to your desired color */
+  }
 
 .answer-option {
     display: flex;
