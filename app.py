@@ -41,6 +41,10 @@ def question():
 
 @app.route('/result')
 def result():
+
+    if 'questions_asked' not in session:
+        return redirect(url_for('index'))
+
     # predict the animal
 
     # get scores

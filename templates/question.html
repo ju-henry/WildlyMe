@@ -53,6 +53,23 @@
                 nextButton.disabled = !form.answer.value;
             });
         });
+
+        (function() {
+            var preventNavigation = function(event) {
+                window.location.replace("/");
+            };
+
+            history.pushState(null, null, location.href);
+            window.onpopstate = preventNavigation;
+
+            // Optional: Disable reload on iOS devices
+            window.onpageshow = function(event) {
+                if (event.persisted) {
+                    preventNavigation();
+                }
+            };
+        })();
+
     </script>
 
 </body>
