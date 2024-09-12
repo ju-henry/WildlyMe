@@ -7,8 +7,10 @@
 </head>
 <body>
     <h1>Your Animal Personality is: {{ animal }}</h1>
-    <h2>Career</h2>
-    <p>{{ info["career"] }}</p>
+    <section>
+        <h2>Career</h2>
+        <p style="text-align: justify;">{{ info["career"] }}</p>
+    </section>
     <a href="{{ url_for('index') }}">Take the test again</a>
 </body>
 </html>
