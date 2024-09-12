@@ -69,10 +69,6 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#answers {
-    padding-right: 10px;
-}
-
 .animal-icons {
     display: flex;
     justify-content: space-around;
@@ -101,11 +97,11 @@ section {
 
 #question_number {
     color: #4CAF50; 
-    font-size: 35px;
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);;
 }
 
 #myleft-column {
-    width: 130px; /* Fixed width for the left column */
+    width: 18%;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -125,6 +121,11 @@ form {
     display: flex;
 }
 
+.container_vertical {
+    display: flex;
+    flex-direction: column;
+}
+
 .column {
     padding: 5px 20px;
     box-sizing: border-box;
@@ -139,9 +140,12 @@ form {
 }
 
 .catchword {
-    text-align: center;
-    background-color: #4CAF5030; /* Add background color */
-    padding: 8px;
+    text-align: left;
+    color: #4CAF50;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    padding-left: 0px;
     border-radius: 5px;
     font-weight: bold;
 }
@@ -168,6 +172,12 @@ form {
     align-items: center;
     margin-bottom: 10px;
     min-height: 34px; /* Minimum height equal to radio button */
+}
+
+#option_text {
+    text-align: justify;
+    margin: 0;
+    font-size: 17px;
 }
 
 input[type="radio"] {

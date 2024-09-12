@@ -26,14 +26,9 @@
             <div class="answer-option">
                 <input type="radio" name="answer" value="{{ loop.index - 1 }}" id="answer{{ loop.index }}">
                 <label>
-                    <div class="container">
-                        <div class="column left-column">
-                            <p class="catchword">{{ question.answer_short[loop.index - 1] }}</p>
-                        </div>
-                        <div class="column right-column">
-                            <div class="vertical-bar"></div>
-                            <p style="text-align: justify;">{{ option }}</p>
-                        </div>
+                    <div class="container_vertical">
+                        <p class="catchword">{{ question.answer_short[loop.index - 1] }}</p>
+                        <p id="option_text">{{ option }}</p>
                     </div>
                 </label>
             </div>
