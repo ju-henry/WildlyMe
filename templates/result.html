@@ -8,6 +8,9 @@
 <body>
     <h1>Your Animal Personality is: {{ animal }}</h1>
     <section>
+        <img src="https://wildlyme.s3.eu-north-1.amazonaws.com/{{ animal }}.jpg" alt="Stored image" style="width: 100%; height: auto;">
+    </section>
+    <section>
         <h2>Career</h2>
         <p style="text-align: justify;">{{ info["career"] }}</p>
     </section>
