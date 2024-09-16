@@ -33,33 +33,44 @@ def question():
         session['question_num'] += 1
 
     if session['question_num'] >= 5:
-        return redirect(url_for('result'))
+
+        # predict the animal
+
+        # get scores
+        score_answers = np.zeros((10, 1))
+        for i, j in zip(session['questions_asked'], session['answers']):
+            score_answers += np.load("scores/question" + str(i) + ".npy")[:, j:(j+1)]
+        
+        # get animal names
+        with open('animals.json', 'r') as f:
+            animals = json.load(f)
+
+        # get the predicted animal
+        pred_animal = list(animals.keys())[np.argmax(score_answers)]
+
+        return redirect(url_for('result', animal=pred_animal))
 
     return render_template('question.html', 
                            question=questions[session['question_num']], 
                            question_number=session['question_num'])
 
-@app.route('/result')
-def result():
+@app.route('/result/<animal>')
+def result(animal):
 
-    if 'questions_asked' not in session:
-        return redirect(url_for('index'))
-
-    # predict the animal
-
-    # get scores
-    score_answers = np.zeros((10, 1))
-    for i, j in zip(session['questions_asked'], session['answers']):
-        score_answers += np.load("scores/question" + str(i) + ".npy")[:, j:(j+1)]
-    
     # get animal names
     with open('animals.json', 'r') as f:
         animals = json.load(f)
 
-    # get the predicted animal
-    pred_animal = list(animals.keys())[np.argmax(score_answers)]
+    return render_template('result.html', animal=animal, info=animals[animal])
 
-    return render_template('result.html', animal=pred_animal, info=animals[pred_animal])
+@app.route('/animals')
+def animals():
+
+    # get animal names
+    with open('animals.json', 'r') as f:
+        animals = json.load(f)
+
+    return render_template('animals.html', list_animals=list(animals.keys()))
 
 if __name__ == '__main__':
     app.run(debug=True)

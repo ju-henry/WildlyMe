@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animals</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>All animals</h1>
+    <section id="animal-previews">
+        <script>
+            // List of animals
+            const animals = {{ list_animals|tojson|safe }};
+    
+            // Function to generate HTML for a single animal
+            function generateAnimalHTML(animal) {
+                return `
+                    <figure>
+                        <a href="result/${animal}"><img src="static/images/${animal}_small.png" alt="${animal}"></a>
+                        <figcaption style="text-align: center;">${animal.charAt(0).toUpperCase() + animal.slice(1)}</figcaption>
+                    </figure>
+                `;
+            }
+    
+            // Generate HTML for all animals
+            let html = '';
+            for (let i = 0; i < animals.length; i += 3) {
+                html += '<div class="animal-icons">';
+                for (let j = i; j < i + 3 && j < animals.length; j++) {
+                    html += generateAnimalHTML(animals[j]);
+                }
+                html += '</div>';
+            }
+    
+            // Insert the generated HTML into the page
+            document.getElementById('animal-previews').innerHTML = html;
+        </script>
+    </section>
+</body>
+</html>
