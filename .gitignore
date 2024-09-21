@@ -2,3 +2,5 @@
 app2.py
 radio_button.html
 *.ipynb
+exp/*
+optim_*.py
