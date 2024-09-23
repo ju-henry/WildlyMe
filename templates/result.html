@@ -8,7 +8,9 @@
 <body>
     <h1>Your Animal Personality is: {{ animal }}</h1>
     <section>
-        <img src="https://wildlyme.s3.eu-north-1.amazonaws.com/{{ animal }}.jpg" alt="Stored image" style="width: 100%; height: auto;">
+        <div id="image-container">
+            <img src="https://wildlyme.s3.eu-north-1.amazonaws.com/{{ animal }}.png" alt="Stored image" style="width: 60%; height: auto;">
+        </div>
     </section>
     <section>
         <h2>Personality</h2>

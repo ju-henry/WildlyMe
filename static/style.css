@@ -188,6 +188,10 @@ input[type="radio"] {
     flex-shrink: 0;
 }
 
+#image-container {
+    text-align: center;
+}
+
 label {
     font-size: 18px;
     cursor: pointer;
