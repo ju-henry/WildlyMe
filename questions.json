@@ -1,21 +1,5 @@
 [
     {
-        "question": "What does your social life look like?",
-        "info": "In the animal kingdom, social behavior varies widely. Some species, like wolves, thrive in packs, while others, like tigers, prefer solitude. Each approach has its advantages, whether it's the strength of community or the independence of being alone. ",
-        "answer_short": [
-            "The Lone Wolf",
-            "The Cozy Circle",
-            "The Group Enthusiast",
-            "The Network Navigator"
-        ],
-        "answers": [
-            "I cherish solitude and rarely interact with others, preferring my own company and pursuits.",
-            "I have a small, tight-knit circle of close family and a few longtime friends I see regularly.",
-            "I thrive in large groups, always surrounded by many friends and acquaintances at social gatherings.",
-            "I constantly seek new connections, eagerly meeting strangers and expanding my social circle."
-        ]
-    },
-    {
         "question": "How do you react to new people?",
         "info": "In the animal kingdom, interactions with newcomers can vary greatly. Some species are curious and welcoming, while others are cautious or even territorial. These behaviors reflect the diverse social strategies animals use to navigate their environments.",
         "answer_short": [
@@ -77,6 +61,22 @@
             "I like to watch others first, picking up techniques and tips before trying it myself.",
             "I enjoy researching and studying before attempting to learn something new, preferring a structured approach.",
             "I trust my gut and intuition, often picking up skills effortlessly as I go along."
+        ]
+    },
+    {
+        "question": "How do you typically react to stress?",
+        "info": "Some animals have evolved to respond to stress with immediate action, while others employ more passive strategies. These responses can include fight or flight reactions, playing dead, or even using social bonds to alleviate stress.",
+        "answer_short": [
+            "The Action Taker",
+            "The Calm Retreater",
+            "The Social Supporter",
+            "The Adaptive Responder"
+        ],
+        "answers": [
+            "I prefer to tackle the problem head-on, channeling my energy into immediate solutions.",
+            "I tend to step back from stressful situations, finding a quiet space to recharge and process my thoughts.",
+            "I seek comfort in the company of friends or family, finding stress relief through social interactions and shared experiences.",
+            "I sometimes confront stress directly, other times I need to retreat and regroup, depending on the situation."
         ]
     }
 ]
