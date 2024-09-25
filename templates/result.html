@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div>
+        <a href="{{ url_for('index') }}" class="button">Take the test again</a>
+        <a href="{{ url_for('animals') }}" class="button">View all animals</a>
+    </div>
     <h1>Your Animal Personality is: {{ animal }}</h1>
     <section>
         <div id="image-container">
@@ -13,14 +17,12 @@
         </div>
     </section>
     <section>
-        <h2>Personality</h2>
+        <h2 style="color: #4CAF50;">Personality</h2>
         <p style="text-align: justify;">{{ info["personality"] }}</p>
     </section>
     <section>
-        <h2>Career</h2>
+        <h2 style="color: #4CAF50;">Career</h2>
         <p style="text-align: justify;">{{ info["career"] }}</p>
     </section>
-    <a href="{{ url_for('index') }}">Take the test again</a>
-    <a href="{{ url_for('animals') }}">View all animals</a>
 </body>
 </html>
