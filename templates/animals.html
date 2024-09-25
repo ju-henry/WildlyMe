@@ -16,7 +16,9 @@
             function generateAnimalHTML(animal) {
                 return `
                     <figure>
-                        <a href="result/${animal}"><img src="static/images/${animal}_small.png" alt="${animal}"></a>
+                        <a href="result/${animal}">
+                            <img src="https://wildlyme.s3.eu-north-1.amazonaws.com/images/${animal}_small.png" alt="${animal}">
+                        </a>
                         <figcaption style="text-align: center;">${animal.charAt(0).toUpperCase() + animal.slice(1)}</figcaption>
                     </figure>
                 `;
