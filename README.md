@@ -1,55 +1,50 @@
 # WildlyMe
 
-## WildlyMe is a personality test built using AI. 
-### Answer 10 questions and you'll know which animal you are!
+## WildlyMe is a personality test built using LLMs. 
+### Answer 5 questions and you'll know which animal you are!
 
 Here it is: [https://wildlyme-67kboof6.b4a.run/](https://wildlyme-67kboof6.b4a.run/)
 
-<span style="color: red;">**update (10/09/2024)**</span>   
-This link is currently not working: [https://wildlyme.koyeb.app/](https://wildlyme.koyeb.app/)
-
-(WildlyMe is still under development.)
-
 <div class="justified">
 
-## How it works
+## Summary
 
-WildlyMe uses sentence embeddings and semantic similarities to find the best matching animal based on ten answers.
-The user experience is similar to the one of traditional personality tests; only the underlying scoring mechanism changes. This said, all questions and information on animals were generated through few-shot learning.
+WildlyMe uses scores produced by LLMs to find the best matching animal based on five answers.
+The user experience is similar to the one of traditional personality tests; only the underlying scoring mechanism changes. This said, all questions and information on animals were generated through few-shot learning. Technically,
+WildlyMe is a Flask app deployed on back4app with images stored on AWS.
 
-<span style="color: red;">**update (10/09/2024)**</span>  
-WildlyMe won't use sentence embeddings and semantic similarity since multiple attempts all showed that embeddings are not accurate enough for this use case (e.g. two short sentences containing the verb 'to cherish' are too close, enven though the complements of the verb are quite different 'I cherish solitude' and 'I cherish strong bonds with my companions'). Instead, WildlyMe will use scores produced by an LLM for each animal and each answer.
+## Basic principles and objectives
 
-## Main challenges and objectives
-
-Not using a human-made scoring of each answer and animal has one advantage: no specialized knowledge on animals is required as embeddings should implicitly encode it. The downside is that there is no control over how an answer contributes to the final scoring. 
-Indeed, embeddings work similarly to a black box and this must be overcome to some extent. 
-With this in mind, let us define a "good" behaviour of a personality test by giving some criteria:
+Personality tests need a way to match a set of answers to a set of categories (in this case, to animals). One possibility is to use scores for each answer and each animal. So for a question with four answers, and given that there are ten animals, we would need a table of 10 by 4 numbers. And since there are five questions, we would have five such tables. When a user has selected his answers, the columns in each table corresponding to the answers are summed up. The matching animal then corresponds to the row with the highest total score.
+ 
+With this in mind, let us define a "good" behaviour of a personality test by giving two criteria:
 
 1. the pairing of answers and animals is plausible, i.e. it does not contradict common knowledge on animals, e.g. if a user answers that he dislikes hierarchy, he should not be matched with a lion. 
 2. the test is not a priori biased, i.e. the probability distribution over all animals of all possible combinations of answers is even.
-3. (optional) the end result is clear-cut, i.e. the distance between the first and second best-matching animals is as large as possible.
 
-## Main directions / ideas
+## Objective 1: plausibility
 
-To better specify the problem, we use a fixed set of target animals. As already mentioned, 10 questions are to be answered.
-These questions are the main variables: we can make, assess, sort and discard them. Potentially, we can have a pool of more than 10 questions, from which to choose from for each user. Here are a few lines of exploration:
+To compensate for the lack of knowledge on animals, LLMs are used as experts to generate scores. They are given a question and its possible answers, and prompted to generate a number between -1.0 and 1.0 (with a spacing of 0.1) for each animal and each answer (as well as an explanation for the number). A score of 1.0 means that the given animal completely agrees with an answer, while a score of -1.0 indicates a complete disagreement. 0.0 is neutral.  
 
-- Embedding each answer separately and summing the embeddings of the 10 chosen answers can be a way to assess the effect of each answer. It also makes the results independent from the order of the questions. 
-- Comparing results using different sets of embeddings (e.g. from BERT, from Mistral) can be done as well.
-- To achieve objective 2., we can have a pool of more than 10 questions and try to find the best subset, i.e. the one whose probability distribution is the most even. 
-- Producing questions can be done using few-shot learning. Then we can have criteria to include the questions in the pool, e.g. we may want to impose that answers have relatively different effects w.r.t. the target, we may also want that questions are relatively different from one another.
-- If we produce new questions, we should be able to include them or not based on some criteria, then find the best subet of questions so that the test is not biased, all this in an iterative fashion to see the quality criteria improve.
+To get a higher confidence in the scores, two LLMs were used: Mistral Large 2 and Llama 3.1 405B. A manual review and agreement is then performed: close scores are averaged, while scores with a high discrepency call for a decision in favour of one against the other. This decision is made based on manual researches on the animal and explanations given by the LLMs.
 
-<span style="color: red;">**update (10/09/2024)**</span>  
-Embedding won't be used. Instead an LLM provides scores between -1 and 1 for each animal and each answer, with -1 meaning that the animal completely disagrees with the answer, and 1 that it completely agrees. So if we have N animals and one question has 4 possible answers, we would get an (N, 4) array of values. If there are 10 questions, we would get 10 such arrays. When a user picks 10 answers from 10 questions, we can group his answers as an (N, 10) array and sum the array along the rows. The row with the highest sum corresponds to the matched animal.
+## Objective 2: fairness
 
-WORK IN PROGRESS.
+Given five questions and their scores, as well as ten animals, it is very likely that the distribution of all possible combinations of answers over the animals is far from even. One way to mitigate this is to have a larger pool of questions and pick the five questions that get the closest to an even distribution.  
+
+18 questions were hence created as described above. Then, a global search for the optimal set of 5 questions was implemented. Since the number of 5 elements in a set of 18 is below 10.000, it ran fairly quickly. The resulting distribution is still far from perfect, see first plot below. The red dashed line represents the ideal distribution. The animal with the highest probability is about 4.5 times more likely to appear than the animal with the lowest probability. This said, the result is a great improvement over the initial set of 5 questions (see second plot below). Note that the red dashed line has different values between the plots: this is because not all questions have the same number of answers, which changes the total number of possibilities, and hence the average number as well.
+
+![Bar plot](images/plots/plot_749.png)
+![Bar plot](images/plots/plot_17357.png)
 
 ## Sources
 
-- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://aclanthology.org/N19-1423) (Devlin et al., NAACL 2019)  
+- [https://docs.mistral.ai/getting-started/models/](https://docs.mistral.ai/getting-started/models/)
 
-- [https://docs.mistral.ai/getting-started/models/](https://docs.mistral.ai/getting-started/models/). Mistral offers an embedding model through its API. Embeddings live in a 1024-dimensional vector space.
+- [Llama 3.1 405B](https://llamaai.online/llama-3-1-405b-free-online-chat-2/)
 
 - [https://www.animalinyou.com/](https://www.animalinyou.com/)
+
+- [back4app](https://www.back4app.com/)
+
+- [AWS](https://aws.amazon.com/)

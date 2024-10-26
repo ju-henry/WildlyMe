@@ -1,0 +1,287 @@
+[
+    {
+        "question": "What does your social life look like?",
+        "info": "In the animal kingdom, social behavior varies widely. Some species, like wolves, thrive in packs, while others, like tigers, prefer solitude. Each approach has its advantages, whether it's the strength of community or the independence of being alone. ",
+        "answer_short": [
+            "The Lone Wolf",
+            "The Cozy Circle",
+            "The Group Enthusiast",
+            "The Network Navigator"
+        ],
+        "answers": [
+            "I cherish solitude and rarely interact with others, preferring my own company and pursuits.",
+            "I have a small, tight-knit circle of close family and a few longtime friends I see regularly.",
+            "I thrive in large groups, always surrounded by many friends and acquaintances at social gatherings.",
+            "I constantly seek new connections, eagerly meeting strangers and expanding my social circle."
+        ]
+    },
+    {
+        "question": "How do you react to new people?",
+        "info": "In the animal kingdom, interactions with newcomers can vary greatly. Some species are curious and welcoming, while others are cautious or even territorial. These behaviors reflect the diverse social strategies animals use to navigate their environments.",
+        "answer_short": [
+            "The Curious Explorer",
+            "The Cautious Observer",
+            "The Friendly Connector",
+            "The Reserved Introvert"
+        ],
+        "answers": [
+            "I approach new people with enthusiasm, eager to learn about them and make new friends.",
+            "I take my time to assess the situation before engaging, preferring to understand the new person first.",
+            "I enjoy introducing new people to my circle and facilitating connections between others.",
+            "I prefer to keep my distance initially, opening up only once I feel comfortable."
+        ]
+    },
+    {
+        "question": "What’s your ideal adventure?",
+        "info": "In the wild, animals embark on various adventures, from long migrations to daring hunts. Each type of adventure reflects the unique behaviors and instincts of different species, showcasing their adaptability and resilience in the face of challenges.",
+        "answer_short": [
+            "The Epic Journey",
+            "The Thrilling Hunt",
+            "The Serene Retreat",
+            "The Social Expedition"
+        ],
+        "answers": [
+            "I dream of traveling vast distances, exploring new landscapes and experiencing different cultures.",
+            "I crave excitement and enjoy taking risks, whether it's trying new activities or seeking out adrenaline-pumping experiences.",
+            "I prefer peaceful adventures, like hiking in nature or relaxing by a quiet lake, where I can recharge and reflect.",
+            "I love adventures that involve friends and family, where we can share experiences and create lasting memories together."
+        ]
+    },
+    {
+        "question": "How do you express your creativity?",
+        "info": "Creativity in the animal kingdom can take many forms, from intricate nest-building to vibrant displays of color and sound. Each species has its own unique way of expressing creativity, reflecting its environment and social structures.",
+        "answer_short": [
+            "The Master Builder",
+            "The Vibrant Performer",
+            "The Thoughtful Artist",
+            "The Innovative Problem Solver"
+        ],
+        "answers": [
+            "I enjoy creating and constructing things, whether it's art, crafts, or even organizing my space.",
+            "I love to express myself through music, dance, or performance, captivating others with my talents.",
+            "I prefer introspective forms of creativity, such as writing, painting, or other solitary artistic pursuits.",
+            "I express my creativity by finding unique solutions to everyday challenges, using my imagination to make life easier."
+        ]
+    },
+    {
+        "question": "How do you approach learning new skills?",
+        "info": "In the animal kingdom, different species have unique ways of learning and adapting to their environments. Some animals learn through observation, while others rely on trial and error or instinct. Each approach highlights the diverse strategies animals use to thrive.",
+        "answer_short": [
+            "The Hands-On Learner",
+            "The Observant Scholar",
+            "The Analytical Thinker",
+            "The Natural Instinct"
+        ],
+        "answers": [
+            "I dive right in and prefer to learn by doing, experimenting until I master the skill.",
+            "I like to watch others first, picking up techniques and tips before trying it myself.",
+            "I enjoy researching and studying before attempting to learn something new, preferring a structured approach.",
+            "I trust my gut and intuition, often picking up skills effortlessly as I go along."
+        ]
+    },
+    {
+        "question": "How do you deal with boredom?",
+        "info": "Animals have unique ways of coping with boredom, whether through play, exploration, or social interactions. Understanding these behaviors can reveal insights into our own methods of finding engagement and excitement.",
+        "answer_short": [
+            "The Adventurous Explorer",
+            "The Creative Thinker",
+            "The Social Butterfly",
+            "The Relaxed Observer"
+        ],
+        "answers": [
+            "I seek out new experiences and adventures to keep things exciting.",
+            "I dive into creative projects or hobbies to stimulate my mind.",
+            "I reach out to friends or family, looking for social interaction to break the monotony.",
+            "I take a moment to unwind and reflect, enjoying the calm before seeking out new activities."
+        ]
+    },
+    {
+        "question": "How do you deal with hierarchy?",
+        "info": "Different species approach hierarchy in unique ways; wolves establish clear dominance, while mice often exhibit submissive and avoidant behaviors.",
+        "answer_short": [
+            "The Independent Spirit",
+            "The Loyal Supporter",
+            "The Active Contributor",
+            "The Confident Leader"
+        ],
+        "answers": [
+            "I prefer to stay away from hierarchical structures, valuing independence and self-direction over formal roles.",
+            "I respect authority and follow established guidelines, believing that clear direction enhances teamwork and stability.",
+            "I actively participate within the hierarchy, sharing my ideas and collaborating with others to improve processes and outcomes.",
+            "I take charge and guide others, confidently making decisions and driving initiatives to achieve our collective goals."
+        ]
+    },
+    {
+        "question": "How do you celebrate achievements?",
+        "info": "Animals have various ways of marking achievements, from displays of dominance to communal celebrations. These behaviors highlight the importance of recognition and bonding in the animal kingdom.",
+        "answer_short": [
+            "The Grand Celebrator",
+            "The Quiet Reflector",
+            "The Social Gatherer",
+            "The Humble Achiever"
+        ],
+        "answers": [
+            "I love to throw big parties and share my success with everyone around me.",
+            "I prefer to celebrate my achievements in a more personal way, perhaps with a quiet moment of reflection.",
+            "I enjoy celebrating with close friends and family, valuing shared experiences over grand gestures.",
+            "I acknowledge my success but prefer to stay modest and not draw too much attention to myself."
+        ]
+    },
+    {
+        "question": "How do you handle routine?",
+        "info": "In the animal kingdom, routines can play a crucial role in survival, from migration patterns to feeding schedules. Different species have adapted to routines in ways that suit their lifestyles and environments.",
+        "answer_short": [
+            "The Structured Planner",
+            "The Flexible Improviser",
+            "The Spontaneous Adventurer",
+            "The Balanced Scheduler"
+        ],
+        "answers": [
+            "I thrive on routine and find comfort in having a set schedule to follow.",
+            "I enjoy having a routine but am open to changing it up when the opportunity arises.",
+            "I prefer to keep my days unpredictable and enjoy the excitement of spontaneity.",
+            "I appreciate a mix of routine and spontaneity, finding a comfortable balance between the two."
+        ]
+    },
+    {
+        "question": "How do you typically react to stress?",
+        "info": "Some animals have evolved to respond to stress with immediate action, while others employ more passive strategies. These responses can include fight or flight reactions, playing dead, or even using social bonds to alleviate stress.",
+        "answer_short": [
+            "The Action Taker",
+            "The Calm Retreater",
+            "The Social Supporter",
+            "The Adaptive Responder"
+        ],
+        "answers": [
+            "I prefer to tackle the problem head-on, channeling my energy into immediate solutions.",
+            "I tend to step back from stressful situations, finding a quiet space to recharge and process my thoughts.",
+            "I seek comfort in the company of friends or family, finding stress relief through social interactions and shared experiences.",
+            "I sometimes confront stress directly, other times I need to retreat and regroup, depending on the situation."
+        ]
+    },
+    {
+        "question": "How do you prefer to communicate?",
+        "info": "Communication in the animal kingdom is incredibly diverse, ranging from complex vocalizations to elaborate body language and even chemical signals. Different species have evolved unique ways to convey information, attract mates, warn of dangers, and coordinate group activities.",
+        "answer_short": [
+            "The Vocal Virtuoso",
+            "The Body Language Expert",
+            "The Silent Signaler",
+            "The Group Coordinator"
+        ],
+        "answers": [
+            "I prefer to express myself through speech or vocalizations, using tone and volume to convey my message effectively.",
+            "I rely heavily on non-verbal cues, using gestures, facial expressions, and postures to communicate my thoughts and feelings.",
+            "I prefer subtle forms of communication, such as leaving messages or using discrete signals to convey information.",
+            "I thrive in collaborative communication, often initiating or facilitating group discussions and decision-making processes."
+        ]
+    },
+    {
+        "question": "How do you approach problem-solving?",
+        "info": "Problem-solving abilities in the animal kingdom are diverse and fascinating. From tool use in primates to collaborative hunting strategies in wolves, different species have evolved unique approaches to overcome challenges in their environments.",
+        "answer_short": [
+            "The Methodical Analyzer",
+            "The Intuitive Responder",
+            "The Collaborative Thinker",
+            "The Adaptive Innovator"
+        ],
+        "answers": [
+            "I prefer to carefully observe and analyze a situation before taking action, considering all possible outcomes.",
+            "I trust my instincts and react quickly, often finding solutions through trial and error.",
+            "I like to work with others, combining different perspectives and skills to solve problems as a team.",
+            "I enjoy thinking outside the box, using creativity and unconventional methods to overcome obstacles."
+        ]
+    },
+    {
+        "question": "How do you approach personal grooming and appearance?",
+        "info": "In the animal kingdom, grooming serves various purposes beyond cleanliness, including social bonding, mate attraction, and even communication. Some species invest significant time in elaborate grooming rituals, while others prioritize camouflage or minimal maintenance.",
+        "answer_short": [
+            "The Meticulous Preener",
+            "The Practical Minimalist",
+            "The Social Groomer",
+            "The Adaptive Chameleon"
+        ],
+        "answers": [
+            "I pay close attention to my appearance, regularly grooming myself and ensuring I look my best at all times.",
+            "I prefer a low-maintenance approach, focusing on basic cleanliness and functionality rather than elaborate grooming rituals.",
+            "I enjoy grooming activities that involve others, seeing it as a way to bond and maintain relationships.",
+            "I adjust my appearance based on my environment or social situation, prioritizing blending in or standing out as needed."
+        ]
+    },
+    {
+        "question": "How do you manage your energy and sleep patterns?",
+        "info": "Sleep patterns and energy management vary widely across the animal kingdom. Some species are strictly diurnal or nocturnal, while others are crepuscular (active during twilight) or cathemeral (active in sporadic intervals throughout the day and night).",
+        "answer_short": [
+            "The Night Owl",
+            "The Early Bird",
+            "The Adaptive Polyphasic"
+        ],
+        "answers": [
+            "I'm most active and alert during the evening and night hours, preferring to sleep during the day when possible.",
+            "I thrive in the early morning hours, waking up with the sun and feeling most energetic at the start of the day.",
+            "I take multiple short naps throughout the day and night, adapting my sleep schedule to my current needs."        ]
+    },
+    {
+        "question": "How do you respond to changes in temperature?",
+        "info": "Temperature regulation varies dramatically across the animal kingdom. Animals have developed diverse strategies to cope with temperature changes, from hibernation and estivation to migration and behavioral adaptations.",
+        "answer_short": [
+            "The Heat Seeker",
+            "The Cold Enthusiast",
+            "The Adaptive Regulator",
+            "The Seasonal Migrator"
+        ],
+        "answers": [
+            "I thrive in warm environments and actively seek out heat. Cold weather makes me sluggish and uncomfortable.",
+            "I prefer cooler temperatures and feel most energetic in cold environments. Hot weather makes me lethargic and irritable.",
+            "I'm comfortable in a wide range of temperatures, easily adjusting my behavior and clothing to maintain comfort.",
+            "I have a strong urge to change locations based on temperature, preferring to move to more comfortable climates as seasons change."
+        ]
+    },
+    {
+        "question": "How do you approach eating and nutrition?",
+        "info": "Dietary habits and nutritional strategies in the animal kingdom are incredibly diverse. Some species are strict herbivores or carnivores, while others are omnivores or have highly specialized diets.",
+        "answer_short": [
+            "The Grazer",
+            "The Feast and Fast Cycler",
+            "The Opportunistic Omnivore",
+            "The Specialized Connoisseur"
+        ],
+        "answers": [
+            "I prefer to eat small amounts frequently throughout the day, maintaining a constant energy level.",
+            "I tend to have large meals infrequently, with periods of fasting in between.",
+            "I'm flexible with my diet, eating a wide variety of foods based on what's available and appealing at the moment.",
+            "I have very specific dietary preferences and stick to a particular type of food, avoiding others."
+        ]
+    },
+    {
+        "question": "How do you adapt to changes in your environment?",
+        "info": "Adaptability is a crucial survival skill in the animal kingdom, allowing species to thrive in diverse habitats and changing conditions. From migratory behaviors to seasonal adaptations, animals showcase remarkable strategies to cope with their surroundings.",
+        "answer_short": [
+            "The Explorer",
+            "The Strategist",
+            "The Resilient Survivor",
+            "The Comfort Seeker"
+        ],
+        "answers": [
+            "I embrace change and seek out new experiences, often venturing into unfamiliar territory to discover what’s out there.",
+            "I carefully analyze changes and plan my actions, making calculated adjustments to ensure my success.",
+            "I adapt by relying on my resourcefulness and resilience, finding ways to make the best of any situation.",
+            "I prefer stability and routine, often sticking to familiar environments and practices that provide comfort."
+        ]
+    },
+    {
+        "question": "How do you prefer to work with others?",
+        "info": "Collaboration and teamwork are essential in the animal kingdom, with many species relying on social structures to achieve common goals.",
+        "answer_short": [
+            "The Team Player",
+            "The Independent Contributor",
+            "The Natural Leader",
+            "The Supportive Ally"
+        ],
+        "answers": [
+            "I thrive in group settings, enjoying the synergy that comes from collaborating with others to achieve shared objectives.",
+            "I prefer to work alone but value the input of others, contributing my skills when needed without relying on a team.",
+            "I take charge in group situations, guiding others and ensuring that everyone is working towards a common goal.",
+            "I enjoy being part of a team by offering support and encouragement, helping others shine while playing a crucial behind-the-scenes role."
+        ]
+    }
+]

@@ -1,7 +1,6 @@
 .env
-app2.py
-radio_button.html
 *.ipynb
 exp/*
-images/*
-optim_*.py
+images/original
+images/resized
+images/small
