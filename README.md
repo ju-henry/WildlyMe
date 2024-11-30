@@ -1,11 +1,13 @@
-# WildlyMe
+# WildlyMe 🦊
 
 ## WildlyMe is a personality test built using LLMs. 
 ### Answer 5 questions and you'll know which animal you are!
 
-Here it is: [https://wildlyme-67kboof6.b4a.run/](https://wildlyme-67kboof6.b4a.run/)
+╰┈➤ Follow the [path](https://wildlyme-67kboof6.b4a.run/) to test it!
 
 <div class="justified">
+
+<br><br>
 
 ## Summary
 
