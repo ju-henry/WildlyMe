@@ -3,7 +3,7 @@
 ## WildlyMe is a personality test built using LLMs. 
 ### Answer 5 questions and you'll know which animal you are!
 
-╰┈➤ Follow the [path](https://wildlyme-67kboof6.b4a.run/) to test it!
+╰┈➤ Follow the [path](https://wildlyme-1.onrender.com/) to test it!
 
 <div class="justified">
 
